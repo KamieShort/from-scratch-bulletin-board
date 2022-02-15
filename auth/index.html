@@ -7,12 +7,29 @@
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
         <link rel="stylesheet" href="../styles/reset.css" />
         <link rel="stylesheet" href="../styles/home.css" />
-        <title>Create Post</title>
+        <title>Auth</title>
     </head>
 
     <body>
-        <header></header>
-        <main></main>
+        <main>
+
+            <div class "sign-in">
+                <form id="sign-in">
+                    <h3>Sign In</h3>
+                    <label>Email </label><input type="email" name="email" id="sign-in-email"/>
+                    <label>Password </label><input type="password" name="password" id="sign-in-password"/>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div class "sign-up">
+                <form id="sign-up">
+                    <h3>Sign Up</h3>
+                    <label>Email </label><input type="email" name="email" id="sign-up-email"/>
+                    <label>Password </label><input type="password" name="password" id="sign-up-password"/>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </main>
 
         <script type="module" src="./auth.js"></script>
     </body>

@@ -4,31 +4,16 @@ const SUPABASE_KEY =
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+function checkError({ data, error }) {
+    return error ? console.error(error) : data;
+}
+
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
-export async function fetchPosts(){
-    const resp = await client.from('bulletin-board').select('*'));
-    console.log(resp, 'test');
-    return checkError(resp);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export async function createPost(post){
-    const resp = await client.from('bulletin-board').insert(post);
+export async function fetchPosts() {
+    const resp = await client.from('bulletin-board').select('*');
+    console.log(resp);
     return checkError(resp);
 }
