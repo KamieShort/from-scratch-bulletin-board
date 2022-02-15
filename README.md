@@ -26,7 +26,7 @@ ASYNC: `createPost()` creates a new row in the database
 
 ## Order of Operations
 
-create supabase data
+x create supabase data
 -home page with post it; link supabase
 -auth page will have login form and sign form; redirect
 -add post page; submit form for create post; redirect if not authenticated; render function-TDD; form will include input for title, description, contact and button. add async function for create post in fetch-utils.
