@@ -13,7 +13,6 @@ export function renderPosts(post) {
     description.classList.add('description');
     contact.textContent = post.contact;
     contact.classList.add('contact');
-    // image.src = './assets/post.png';
 
     postdiv.append(title, description, contact);
     return postdiv;

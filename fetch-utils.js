@@ -17,3 +17,13 @@ export async function fetchPosts() {
     console.log(resp);
     return checkError(resp);
 }
+
+export async function signupUser(email, password) {
+    const resp = await client.auth.signUp({ email, password });
+    console.log(resp);
+}
+
+export async function signInUser(email, password) {
+    const resp = await client.auth.signIn({ email, password });
+    console.log(resp);
+}
