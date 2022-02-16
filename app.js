@@ -4,6 +4,8 @@ import { renderPosts } from './render-utils.js';
 // import { renderPosts } from './render-utils.js';
 
 const postList = document.getElementById('post-container');
+const signInBtn = document.getElementById('sign-in');
+const createBtn = document.getElementById('create-post');
 
 window.addEventListener('load', async () => {
     const posts = await fetchPosts();
@@ -27,3 +29,10 @@ window.addEventListener('load', async () => {
 //     }
 // }
 // loadPosts();
+signInBtn.addEventListener('click', () => {
+    location.replace('/auth');
+});
+
+createBtn.addEventListener('click', () => {
+    location.replace('/create');
+});

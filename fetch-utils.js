@@ -18,7 +18,7 @@ export async function fetchPosts() {
     return checkError(resp);
 }
 
-export async function signupUser(email, password) {
+export async function signUpUser(email, password) {
     const resp = await client.auth.signUp({ email, password });
     console.log(resp);
 }
