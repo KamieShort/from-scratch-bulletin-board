@@ -17,18 +17,6 @@ window.addEventListener('load', async () => {
     }
 });
 
-// async function loadPosts() {
-//     const posts = await fetchPosts();
-//     const postList = document.getElementById('post-container');
-//     for (let post of posts) {
-//         console.log(post);
-//         const div = renderPosts(post);
-//         // li.textContent = post.title;
-
-//         postList.append(div);
-//     }
-// }
-// loadPosts();
 signInBtn.addEventListener('click', () => {
     location.replace('/auth');
 });
