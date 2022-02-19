@@ -49,7 +49,8 @@ export async function logout() {
 //     return checkError(resp);
 // }
 export async function createPost(item) {
-    const resp = await client.from('bulletin-board').insert({ description: item });
+    const resp = await client.from('bulletin-board').insert(item);
+    console.log(resp);
     return checkError(resp);
 }
 

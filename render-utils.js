@@ -15,5 +15,6 @@ export function renderPosts(post) {
     contact.classList.add('contact');
 
     postdiv.append(title, description, contact);
+    console.log(postdiv);
     return postdiv;
 }
