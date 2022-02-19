@@ -1,7 +1,6 @@
 // import functions and grab DOM elements
 import { fetchPosts } from './fetch-utils.js';
 import { renderPosts } from './render-utils.js';
-// import { renderPosts } from './render-utils.js';
 
 const postList = document.getElementById('post-container');
 const signInBtn = document.getElementById('sign-in');

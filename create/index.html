@@ -19,12 +19,17 @@
     <body>
         <header>
             <button id="logout">Logout</button>
+            <button id="home">Home</button>
         </header>
         <main>
-            <form>
-                <label>Create Post</label><input id="create" type="text" />
+            <form id="post-form">
+                <h2>Create Post</h2>
+                <input id="title" type="text">Title</input>
+                <input id="description" type="text">Description</input>
+                <input id="contact" type="text">Contact</input>
                 <button>Submit</button>
             </form>
+      
         </main>
 
         <script type="module" src="./create.js"></script>

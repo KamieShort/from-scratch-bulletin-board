@@ -48,3 +48,13 @@ button {
     /* background-color: aquamarine; */
     color: blue;
 }
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+}

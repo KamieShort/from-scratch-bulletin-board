@@ -8,6 +8,19 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
+export function checkAuth() {
+    const user = getUser();
+    if (!user) {
+        location.replace('/auth');
+    }
+}
+export function redirectIfLoggedIn() {
+    const user = getUser();
+    console.log(user);
+    if (user) {
+        location.replace('/');
+    }
+}
 export async function fetchPosts() {
     const resp = await client.from('bulletin-board').select('*');
     console.log(resp);
@@ -16,35 +29,26 @@ export async function fetchPosts() {
 
 export async function signUpUser(email, password) {
     const resp = await client.auth.signUp({ email, password });
-    console.log(resp);
+    console.log(resp.user);
+    return resp;
 }
 
 export async function signInUser(email, password) {
     const resp = await client.auth.signIn({ email, password });
     console.log(resp);
-}
-
-export function checkAuth() {
-    const user = getUser();
-    if (!user) {
-        location.replace('/');
-    }
-}
-
-export function redirectIfLoggedIn() {
-    const user = getUser();
-    console.log(user);
-    if (user) {
-        location.replace('/auth');
-    }
+    return resp;
 }
 
 export async function logout() {
     await client.auth.signOut();
-    location.replace('/');
+    return (window.location.href = '../');
 }
 
-export async function createPost(description) {
+// export async function createPost(description) {
+//     const resp = await client.from('bulletin-board').insert({ description: item });
+//     return checkError(resp);
+// }
+export async function createPost(item) {
     const resp = await client.from('bulletin-board').insert({ description: item });
     return checkError(resp);
 }
