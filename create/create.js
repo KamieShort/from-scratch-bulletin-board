@@ -1,6 +1,6 @@
-import { checkAuth, createPost, logout } from '../fetch-utils.js';
+import { checkAuth, createPost, logout, redirectIfLoggedIn } from '../fetch-utils.js';
 
-// checkAuth();
+checkAuth();
 
 const logoutBtn = document.getElementById('logout');
 const createForm = document.getElementById('post-form');
@@ -24,4 +24,5 @@ createForm.addEventListener('submit', async (e) => {
     };
     const resp = await createPost(newPost);
     console.log(resp);
+    redirectIfLoggedIn();
 });
