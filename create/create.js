@@ -27,6 +27,5 @@ createForm.addEventListener('submit', async (e) => {
     };
     await createPost(newPost);
     // console.log(resp);
-    // redirectIfLoggedIn();
-    // return postdiv;
+    redirectIfLoggedIn();
 });
