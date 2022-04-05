@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/home.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+            rel="stylesheet"
+        />
+        <title>Create Post</title>
+    </head>
+
+    <body>
+        <header>
+            <button id="logout">Logout</button>
+            <button id="home">Home</button>
+        </header>
+        <main>
+            <form id="post-form">
+                <h2>Create Post</h2>
+                <input id="title" name="title" type="text">Title</input>
+                <input id="description" name="description" type="text">Description</input>
+                <input id="contact" name="contact" type="text">Contact</input>
+                <button>Submit</button>
+            </form>
+      
+        </main>
+
+        <script type="module" src="./create.js"></script>
+    </body>
+</html>

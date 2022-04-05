@@ -1,1 +1,60 @@
 /* add home page styles here */
+body {
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+}
+#post-container {
+    display: flex;
+    flex-direction: row;
+    contain: content;
+}
+/* #sign-in {
+    margin-left: 20%;
+}
+#sign-up {
+    margin-left: 20%;
+} */
+
+button {
+    background-color: cadetblue; /* Green */
+    border: solid;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.postdiv {
+    background-image: url('../assets/post.png');
+    background-size: 120%;
+    contain: content;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: larger;
+    /* border-radius: 8px; */
+    /* border: solid 1px black; */
+    /* background-color: aquamarine; */
+    color: blue;
+}
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+}
